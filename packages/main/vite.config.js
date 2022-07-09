@@ -1,6 +1,5 @@
 import {node} from '../../.electron-vendors.cache.json';
 import {join} from 'path';
-import json from '@rollup/plugin-json';
 import {version} from '../../package.json';
 
 const PACKAGE_ROOT = __dirname;
@@ -40,9 +39,6 @@ const config = {
   define: {
     __APP_VERSION__: version,
   },
-  plugins: [
-    json(),
-  ],
 };
 
 export default config;
