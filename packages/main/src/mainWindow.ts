@@ -115,7 +115,7 @@ export async function restoreOrCreateWindow() {
     try {
       if (!fs.existsSync('./resources/config.yml')) {
         return logger({
-          message: time() + chalk.red(`没有找到配置文件[${chalk.yellow('config.yml')}]!`),
+          message: time() + chalk.red(`没有找到配置文件[${chalk.yellow('./resources/config.yml')}], 请先在设置中配置并保存!`),
           type: 'error',
         });
       }
