@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "sourceMap": false,
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "strict": true,
+    "isolatedModules": true,
+    "types" : ["node"],
+    "allowSyntheticDefaultImports": true,
+
+    "baseUrl": ".",
+  },
+  "include": [
+    "src/**/*.ts",
+    "../../types/**/*.d.ts"
+, "../renderer/types/global.d.ts", "../main/src/TwitchTrack.ts", "../main/src/global.d.ts", "../main/src/DailyQuest.ts"  ],
+  "exclude": [
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
+}

@@ -1,0 +1,37 @@
+#### AWA 配置(必需) ####
+startOnOpen: false # 启动软件时立即开始任务
+awaCookie: '' # 外星人论坛Cookie, 可以只有`REMEMBERME`, 没有`REMEMBERME`则必须有`PHPSESSID`和`sc`, 但会导致连续签到天数获取错误，不会影响其他功能
+awaHost: 'www.alienwarearena.com' # 外星人论坛Host, 默认的没问题就不要改
+awaUserId: '' # 外星人论坛用户Id
+awaBorderId: '' # 外星人论坛当前的BorderId
+awaBadgeIds: '' # 外星人论坛当前的BadgeIds
+awaAvatar: '' # 外星人论坛当前的Avatar
+awaBoosterNotice: true # 外星人论坛任务大于1个时询问是否开启助推器，助推器需要自行开启！！！
+awaQuests:
+  - 每日任务 # 自动做每日任务，不需要做此任务删除或注释掉此行
+  - AWA在线 # 自动做AWA在线任务，不需要做此任务删除或注释掉此行
+  - Twitch在线 # 自动做Twitch直播间在线任务，不需要做此任务删除或注释掉此行
+  - Steam挂机 # 自动做Steam游戏时长任务，不需要做此任务删除或注释掉此行
+
+#### Twitch 配置 ####
+twitchCookie: '' # Twitch Cookie, 须包括`unique_id` 和 `auth-token`
+
+#### ASF 配置 ####
+asfProtocol: 'http'
+asfHost: "127.0.0.1"
+asfPort: "1242"
+asfPassword: ''
+asfBotname: ''
+
+#### 代理设置(可选) ####
+proxy:
+  enable:
+    - github # 在检测更新时使用代理，不使用删掉此行
+    - twitch # 在访问Twitch站点时使用代理，不使用删掉此行
+    - awa # 在访问外星人论坛站点时使用代理，不使用删掉此行
+    - asf # 在访问ASF时使用代理，不使用删掉此行
+  protocol: 'http' # 代理协议，'http'|'https'|'socks4'|'socks5'
+  host: '127.0.0.1' # 代理host
+  port: 1080 # 代理端口
+  username: '' # 代理用户名，没有可留空
+  password: '' # 代理密码，没有可留空
