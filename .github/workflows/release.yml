@@ -16,7 +16,7 @@ jobs:
           node-version: 16.x
       - run: npm install
       - run: npm run compile
-      - run: npm run compile
+      - run: npm run package
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
