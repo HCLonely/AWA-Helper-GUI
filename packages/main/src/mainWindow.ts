@@ -114,11 +114,14 @@ export async function restoreOrCreateWindow() {
   ipcMain.handle('startDailyQuest', async () => {
     try {
       if (!fs.existsSync('./resources/config.yml')) {
-        return logger({
+        console.log('1');
+        logger({
           message: time() + chalk.red(`没有找到配置文件[${chalk.yellow('./resources/config.yml')}], 请先在设置中配置并保存!`),
           type: 'error',
         });
+        return false;
       }
+      console.log('2');
 
       const defaultConfig: config = {
         awaHost: 'www.alienwarearena.com',

@@ -1142,9 +1142,11 @@ window.ipcRenderer.on(
 const startDailyQuest = () => {
   tasksStatus.main = 'doing';
   const newConfig = readSetting();
-  taskInfoData.timeOnSite.show = newConfig.awaQuests.includes('AWA在线');
-  taskInfoData.watchTwitch.show = newConfig.awaQuests.includes('Twitch在线');
-  taskInfoData.steamQuest.show = newConfig.awaQuests.includes('Steam挂机');
+  if (newConfig) {
+    taskInfoData.timeOnSite.show = newConfig.awaQuests.includes('AWA在线');
+    taskInfoData.watchTwitch.show = newConfig.awaQuests.includes('Twitch在线');
+    taskInfoData.steamQuest.show = newConfig.awaQuests.includes('Steam挂机');
+  }
   window.ipcRenderer.invoke('startDailyQuest').catch(() => startDailyQuest());
 };
 window.onload = function () {
