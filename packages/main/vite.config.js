@@ -37,7 +37,7 @@ const config = {
     brotliSize: false,
   },
   define: {
-    __APP_VERSION__: version,
+    __APP_VERSION__: `"${version}"`,
   },
 };
 
