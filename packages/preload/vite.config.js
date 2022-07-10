@@ -1,7 +1,6 @@
 import {chrome} from '../../.electron-vendors.cache.json';
 import { preload } from 'unplugin-auto-expose';
 import { version, author } from '../../package.json';
-
 const PACKAGE_ROOT = __dirname;
 
 /**

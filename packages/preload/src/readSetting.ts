@@ -6,16 +6,6 @@ const readSetting = (congifFilePath = './resources/config.yml') => {
     return null;
   }
 
-  /*
-  if (!fs.existsSync('version') || (fs.readFileSync('version').toString() !== version && fs.existsSync('CHANGELOG.txt'))) {
-    log(chalk.green('此版本更新内容：'));
-    console.table(fs.readFileSync('CHANGELOG.txt').toString().trim()
-      .split('\n')
-      .map((e) => e.trim().replace('- ', '')));
-    fs.writeFileSync('version', version);
-  }
-  */
-
   const defaultConfig: config = {
     awaHost: 'www.alienwarearena.com',
     awaBoosterNotice: true,
